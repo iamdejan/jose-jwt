@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'id.train.steam'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.25.6'
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.72'
+    implementation 'org.springframework.security:spring-security-crypto:6.0.0'
+    implementation 'commons-logging:commons-logging:1.2'
+}
