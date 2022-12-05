@@ -134,7 +134,7 @@ public class Main {
         validateJWT(serializedJWT);
     }
 
-    private static String sendJWT() throws JOSEException, NoSuchAlgorithmException {
+    private static String sendJWT() throws JOSEException {
         var now = Instant.now();
 
         var password = "password";
@@ -159,7 +159,6 @@ public class Main {
         var encryptor = new RSAEncrypter(PUBLIC_KEY);
         jwt.encrypt(encryptor);
         return jwt.serialize();
-
     }
 
     /**
